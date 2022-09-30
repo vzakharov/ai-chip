@@ -12,7 +12,7 @@
                     Grendel. A Beast of a Chip
                   </strong>
                 </h1>
-                <img src="/images/grendel.png" alt="Grendel 👹 A Beast of a Chip"
+                <img src="./images/grendel.png" alt="Grendel 👹 A Beast of a Chip"
                   style="width: 192px" class="m-3"
                 />
                 <b-row>
