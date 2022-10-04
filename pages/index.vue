@@ -21,9 +21,11 @@
                     <p class="lead py-3">
                       Undum is a low-power, high-performance and easy-to-use AI microchip that has been specifically designed for medical equipment. By powering your devices with Undum, you can help your customers make better decisions, faster.
                     </p>
-                    <b-button size="lg" variant="primary" v-b-modal.waitlist>
+                    <b-button size="lg" variant="primary" v-b-modal.waitlist
+                      v-if="!submitted"
+                    >
                       Join the waitlist
-                    </b-button>
+                    </b-button>                    
                     <b-modal id="waitlist" title="Join the waitlist" hide-footer>
                       <p>
                         Thank you for your interest in Undum! We are currently finalizing our product and preparing for launch. Please enter your email address below, and we’ll let you know as soon as Undum becomes available.
@@ -42,7 +44,16 @@
                             placeholder="Enter email"
                           ></b-form-input>
                         </b-form-group>
-                        <b-button type="submit" variant="primary">Submit</b-button>
+                        <b-button type="submit" variant="primary"
+                          v-if="!pending"
+                        >
+                          Submit
+                        </b-button>
+                        <b-spinner
+                          v-if="pending"
+                          small
+                          label="Submitting..."
+                        />
                       </b-form>
                     </b-modal>
                   </b-col>
@@ -131,7 +142,8 @@
 
     data() {
       return {
-        email: ''
+        email: '',
+        pending: false,
       }
     },
 
@@ -142,6 +154,8 @@
         // body: {"build":"1664267677813x956331564579529000","email": ...}
         let axios = require('axios')
         try {
+
+          this.pending = true
 
           await axios.post('https://b.ideality.app/api/1.1/wf/buildRequest_v2', {
             build: '1664267677813x956331564579529000',
@@ -155,13 +169,21 @@
           })
 
         } catch (error) {
+
           this.$bvToast.toast('There was an error submitting your email address. Please try again later.', {
             title: 'Error',
             variant: 'danger',
             solid: true
           })
+
         } finally {
+
           this.$bvModal.hide('waitlist')
+          this.$nextTick(() => {
+            this.email = ''
+            this.pending = false
+          })
+
         }
       }
     },
