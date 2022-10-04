@@ -129,12 +129,12 @@
 
     head() {
       return {
-        title: 'Grendel 👹 A Beast of a Chip',
+        title: 'Undum 💜 Powering healthcare with AI, one device at a time.',
         meta: [
           {
             hid: 'description',
             name: 'description',
-            content: 'Grendel is a powerful AI chip that can be used for a wide range of applications. It is designed to accelerate the development of AI-based systems by providing a simple, scalable and cost-effective solution for designing and testing AI models.'
+            content: 'Undum is a low-power, high-performance and easy-to-use AI microchip that has been specifically designed for medical equipment. By powering your devices with Undum, you can help your customers make better decisions, faster.'
           }
         ]
       }
