@@ -13,7 +13,7 @@
                 <h2 class="display-5 mb-3">
                   Powering healthcare with AI, one device at a time
                 </h2>
-                <img src="/images/undum2.png"
+                <img src="./images/undum2.png"
                   style="width: 320px" class="m-3"
                 />
                 <b-row>
