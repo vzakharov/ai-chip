@@ -64,5 +64,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  generate: {
+    routes: [
+      '/content/specs', '/content/team', '/content/docs', '/content/blog', '/content/careers'
+    ]
+  },
 }
