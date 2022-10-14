@@ -1,4 +1,4 @@
-# grendel
+# ai-chip
 
 ## Build Setup
 

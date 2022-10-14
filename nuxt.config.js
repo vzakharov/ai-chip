@@ -3,12 +3,12 @@ export default {
   target: 'static',
   ssr: false,
   router: {
-    base: '/grendel/'
+    base: '/ai-chip/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'grendel',
+    title: 'Undum',
     htmlAttrs: {
       lang: 'en'
     },
