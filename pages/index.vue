@@ -1,7 +1,7 @@
 <template>
   <b-container fluid>
     <!-- Hero section -->
-    <b-row align-v="center" align-h="center" style="height: 100vh" class="hero">
+    <b-row align-v="center" align-h="center" class="hero">
       <b-col style="max-width: 800px" class="px-2 px-md-5">
         <b-row align-h="center" class="gx-4">
           <b-col>
@@ -13,8 +13,8 @@
                 <h2 class="display-5 mb-3">
                   Powering healthcare with AI, one device at a time
                 </h2>
-                <img src="/ai-chip/images/undum2.png"
-                  style="width: 320px" class="m-3"
+                <img src="/ai-chip/images/undum-3.png"
+                  style="width: 240px"
                 />
                 <b-row>
                   <b-col>
@@ -129,7 +129,7 @@
 
     head() {
       return {
-        title: 'Undum 💜 Powering healthcare with AI, one device at a time.',
+        title: 'Undum. Powering healthcare with AI, one device at a time.',
         meta: [
           {
             hid: 'description',
@@ -170,6 +170,8 @@
 
         } catch (error) {
 
+          console.error(error)
+
           this.$bvToast.toast('There was an error submitting your email address. Please try again later.', {
             title: 'Error',
             variant: 'danger',
@@ -201,6 +203,8 @@
   color: #333333;
   /* Badass font */
   font-family: 'Helvetica', sans-serif;
+  /* View-height: 100vh minus 48 */
+  min-height: calc(100vh - 48px);
 }
 
 .second-section {

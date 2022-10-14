@@ -19,7 +19,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './images/undum_icon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: './images/undum-3.png' }
     ]
   },
 
