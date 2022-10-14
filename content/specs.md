@@ -33,4 +33,4 @@ description: 'Technical specifications for Undum, an AI chip for the healthcare 
 
 ## Chipset block diagram
 
-![Chipset block diagram](/images/block-diagram.png)
+![Chipset block diagram](/ai-chip/images/block-diagram.png)
